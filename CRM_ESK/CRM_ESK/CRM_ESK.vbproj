@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ApplicationIcon>Esk.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42CFAFFA-9E23-44BC-B72E-DAD91F94B115}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CRM_ESK.My.MyApplication</StartupObject>
+    <RootNamespace>CRM_ESK</RootNamespace>
+    <AssemblyName>CRM_ESK</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CRM_ESK.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CRM_ESK.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\Downloads\Bin\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Chart.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Windows, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Chart.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Compression.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Core.WinForms, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Data.WinForms, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.DataSource.WinForms, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.DataSource.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.DICOM.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.DICOM.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.DocIO.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Grid.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Grouping.Windows, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Grid.Grouping.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Grouping.Windows.XmlSerializers, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Grid.Grouping.Windows.XmlSerializers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Grid.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows.XmlSerializers, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Grid.Windows.XmlSerializers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.WinForms, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.GridConverter.Windows, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.GridConverter.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.GridHelperClasses.Windows, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.GridHelperClasses.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Grouping.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Grouping.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Linq.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Linq.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.OfficeChart.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.OfficeChart.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Pdf.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.PivotAnalysis.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.PivotAnalysis.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataGrid.WinForms, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataGridConverter.WinForms, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.SfDataGridConverter.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfInput.WinForms, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfListView.WinForms, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Shared.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.SpellChecker.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Tools.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.Tools.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base, Version=18.1400.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Syncfusion\Essential Studio\Windows\18.1.0.42\Assemblies\4.0\Syncfusion.XlsIO.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActClass.vb" />
+    <Compile Include="AddClient.Designer.vb">
+      <DependentUpon>AddClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddContact.Designer.vb">
+      <DependentUpon>AddContact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddContact.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEvent.Designer.vb">
+      <DependentUpon>AddEvent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddEvent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProject.Designer.vb">
+      <DependentUpon>AddProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSalesOrder.Designer.vb">
+      <DependentUpon>AddSalesOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddSalesOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactSelect.Designer.vb">
+      <DependentUpon>ContactSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContactSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerClass.vb" />
+    <Compile Include="CustomerExtInfo.Designer.vb">
+      <DependentUpon>CustomerExtInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerExtInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerMerge.Designer.vb">
+      <DependentUpon>CustomerMerge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMerge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerSelect.Designer.vb">
+      <DependentUpon>CustomerSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerSelectList.Designer.vb">
+      <DependentUpon>CustomerSelectList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSelectList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Declarations.vb" />
+    <Compile Include="DynamicClasses.vb" />
+    <Compile Include="Functions.vb" />
+    <Compile Include="HighPrice.Designer.vb">
+      <DependentUpon>HighPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HighPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemGroupsInProject.Designer.vb">
+      <DependentUpon>ItemGroupsInProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ItemGroupsInProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemHighPrice.Designer.vb">
+      <DependentUpon>ItemHighPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ItemHighPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemSelectList.Designer.vb">
+      <DependentUpon>ItemSelectList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ItemSelectList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemWHAbsences.Designer.vb">
+      <DependentUpon>ItemWHAbsences.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ItemWHAbsences.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOFunctions.vb" />
+    <Compile Include="MainForm.designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PlansApprovement.Designer.vb">
+      <DependentUpon>PlansApprovement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlansApprovement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectClass.vb" />
+    <Compile Include="ProjectDetailsImport.Designer.vb">
+      <DependentUpon>ProjectDetailsImport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDetailsImport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectList.Designer.vb">
+      <DependentUpon>ProjectList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectSelect.Designer.vb">
+      <DependentUpon>ProjectSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesOrderList.Designer.vb">
+      <DependentUpon>SalesOrderList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesOrderList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchControllerExt.vb" />
+    <Compile Include="SearchControllerExt2.vb" />
+    <Compile Include="SearchControllerExt4.vb" />
+    <Compile Include="SearchControllerExt5.vb" />
+    <Compile Include="SendReturnAction.Designer.vb">
+      <DependentUpon>SendReturnAction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SendReturnAction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service References\CalendarZimbraService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\spbadm4\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\spbadm4_EWS\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierSelect.Designer.vb">
+      <DependentUpon>SupplierSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierSelectList.Designer.vb">
+      <DependentUpon>SupplierSelectList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierSelectList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEvent.Designer.vb">
+      <DependentUpon>ViewEvent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEvent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Web References\spbprd4\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WHAbsences.Designer.vb">
+      <DependentUpon>WHAbsences.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WHAbsences.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddClient.resx">
+      <DependentUpon>AddClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddContact.resx">
+      <DependentUpon>AddContact.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEvent.resx">
+      <DependentUpon>AddEvent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProject.resx">
+      <DependentUpon>AddProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSalesOrder.resx">
+      <DependentUpon>AddSalesOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactSelect.resx">
+      <DependentUpon>ContactSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerExtInfo.resx">
+      <DependentUpon>CustomerExtInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerMerge.resx">
+      <DependentUpon>CustomerMerge.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerSelect.resx">
+      <DependentUpon>CustomerSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerSelectList.resx">
+      <DependentUpon>CustomerSelectList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighPrice.resx">
+      <DependentUpon>HighPrice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemGroupsInProject.resx">
+      <DependentUpon>ItemGroupsInProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemHighPrice.resx">
+      <DependentUpon>ItemHighPrice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemSelectList.resx">
+      <DependentUpon>ItemSelectList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemWHAbsences.resx">
+      <DependentUpon>ItemWHAbsences.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlansApprovement.resx">
+      <DependentUpon>PlansApprovement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectDetailsImport.resx">
+      <DependentUpon>ProjectDetailsImport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectList.resx">
+      <DependentUpon>ProjectList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectSelect.resx">
+      <DependentUpon>ProjectSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrderList.resx">
+      <DependentUpon>SalesOrderList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendReturnAction.resx">
+      <DependentUpon>SendReturnAction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierSelect.resx">
+      <DependentUpon>SupplierSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierSelectList.resx">
+      <DependentUpon>SupplierSelectList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEvent.resx">
+      <DependentUpon>ViewEvent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WHAbsences.resx">
+      <DependentUpon>WHAbsences.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\CalendarZimbraService\CalendarZimbraService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalendarZimbraService\CalendarZimbraService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalendarZimbraService\CalendarZimbraService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalendarZimbraService\Service1.wsdl" />
+    <None Include="Service References\spbadm4\Esk365Service.wsdl" />
+    <None Include="Service References\spbadm4\ESK365Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\spbadm4\ESK365Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\spbadm4\ESK365Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\spbadm4_EWS\EskEWSService.wsdl" />
+    <None Include="Service References\spbadm4_EWS\EskEWSService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\spbadm4_EWS\EskEWSService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\spbadm4_EWS\EskEWSService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\spbprd4\Lists.wsdl" />
+    <None Include="Web References\spbprd4\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArrowUp.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Esk.ico" />
+    <Content Include="FilteredIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FilterIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\CalendarZimbraService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\CalendarZimbraService\configuration.svcinfo" />
+    <None Include="Service References\CalendarZimbraService\configuration91.svcinfo" />
+    <None Include="Service References\CalendarZimbraService\CalendarZimbraService.disco" />
+    <None Include="Service References\spbadm4_EWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\spbadm4_EWS\configuration.svcinfo" />
+    <None Include="Service References\spbadm4_EWS\configuration91.svcinfo" />
+    <None Include="Service References\spbadm4_EWS\EskEWSService.disco" />
+    <None Include="Web References\spbprd4\Lists.disco" />
+    <None Include="Service References\spbadm4\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\spbadm4\configuration.svcinfo" />
+    <None Include="Service References\spbadm4\configuration91.svcinfo" />
+    <None Include="Service References\spbadm4\ESK365Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{EF53050B-882E-4776-B643-EDA472E8E3F2}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="ScaAppLogonIntfs">
+      <Guid>{05896B8E-2D4A-42FB-84D9-0B73DF66349A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ScaLanSrvIntfs">
+      <Guid>{574202FC-B846-4603-A736-FC6FD8C3EFB9}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ScaPrintEngine">
+      <Guid>{76B41165-103B-4026-8470-F5577D566D09}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SfwIII">
+      <Guid>{A6FD015A-31A9-4AE0-B181-F3FD2E41888B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CalendarZimbraService\" />
+    <WCFMetadataStorage Include="Service References\spbadm4\" />
+    <WCFMetadataStorage Include="Service References\spbadm4_EWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://spbprd4/sd/_vti_bin/Lists.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\spbprd4\</RelPath>
+      <UpdateFromURL>http://spbprd4/sd/_vti_bin/Lists.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CRM_ESK_spbprd4_Lists</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
