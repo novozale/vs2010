@@ -1,0 +1,14 @@
+
+
+Date:2020-04-21 08:28:42,313
+Thread:[1]
+Level:ERROR
+Logger:Syncfusion.TemplateWizard.Base.IWizardImplementation                         [(null)]
+Message:System.ComponentModel.Composition.ImportCardinalityMismatchException: No valid exports were found that match the constraint '((exportDefinition.ContractName == "NuGet.VisualStudio.IVsPackageInstaller") AndAlso (exportDefinition.Metadata.ContainsKey("ExportTypeIdentity") AndAlso "NuGet.VisualStudio.IVsPackageInstaller".Equals(exportDefinition.Metadata.get_Item("ExportTypeIdentity"))))', invalid exports may have been rejected.
+   at System.ComponentModel.Composition.Hosting.ExportProvider.GetExports(ImportDefinition definition, AtomicComposition atomicComposition)
+   at System.ComponentModel.Composition.Hosting.ExportProvider.GetExportsCore(Type type, Type metadataViewType, String contractName, ImportCardinality cardinality)
+   at System.ComponentModel.Composition.Hosting.ExportProvider.GetExportedValueCore[T](String contractName, ImportCardinality cardinality)
+   at System.ComponentModel.Composition.Hosting.ExportProvider.GetExportedValue[T](String contractName)
+   at System.ComponentModel.Composition.Hosting.ExportProvider.GetExportedValue[T]()
+   at Microsoft.VisualStudio.ComponentModelHost.ComponentModel.GetService[T]()
+   at Syncfusion.TemplateWizard.Base.IWizardImplementation.AddAssembly(String frameworkVersion, VSProject vsProject, String selectedItemTemplate, ServiceProvider _nugetService, Boolean isCallFromTestingAutomation, String AssemblyFromLocation, Boolean isAddSyncfusionItemSelected, TargetPlatform targetPlatform, String SelectedVersion, Boolean isItemTemplateProject, Project _project, String _destinationPath, String SelectedTheme)
