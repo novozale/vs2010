@@ -1,0 +1,12 @@
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\bin\Debug\CRM_ESK_DailyJob.exe.config
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\bin\Debug\CRM_ESK_DailyJob.exe
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\bin\Debug\CRM_ESK_DailyJob.pdb
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\bin\Debug\CRM_ESK_DailyJob.xml
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\obj\x86\Debug\CRM_ESK_DailyJob.vbproj.ResolveComReference.cache
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\obj\x86\Debug\CRM_ESK_DailyJob.Resources.resources
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\obj\x86\Debug\CRM_ESK_DailyJob.exe
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\obj\x86\Debug\CRM_ESK_DailyJob.xml
+C:\Documents and Settings\developer\Мои документы\Visual Studio 2010\Projects\CRM_ESK_DailyJob\CRM_ESK_DailyJob\obj\x86\Debug\CRM_ESK_DailyJob.pdb
